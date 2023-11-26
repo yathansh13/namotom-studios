@@ -9,7 +9,7 @@ function Navbar() {
     import("preline");
   }, []);
   return (
-    <header class="navb flex flex-wrap sm:justify-start sm:flex-nowrap z-50 w-full bg-white text-sm py-4 rounded-md ">
+    <header class="navb flex flex-wrap sm:justify-start sm:flex-nowrap z-50 w-full bg-white text-sm py-4  ">
       <nav
         class="max-w-[85rem] w-full mx-auto px-4 sm:flex sm:items-center sm:justify-between"
         aria-label="Global"
@@ -19,13 +19,12 @@ function Navbar() {
             class="logo inline-flex items-center gap-x-2 text-xl font-semibold dark:text-white"
             href="#"
           >
-           
             <Image
               className="mx-5"
               src="./logo.svg"
               alt="Logo"
-              width={50}
-              height={50}
+              width={40}
+              height={40}
             />
             Namotom Studios
           </a>
