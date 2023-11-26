@@ -1,0 +1,16 @@
+@import url(https://db.onlinewebfonts.com/c/e47842169b17674250d3f8ed52cf53f8?family=Touche+W03+Semibold);
+
+.navb {
+  background-color: #402e32;
+}
+
+.logo {
+  font-family: "Touche W03 Semibold";
+}
+
+.logo2 {
+  font-family: "Touche W03 Semibold";
+  font-size: 1rem;
+  color: #f3f3cc;
+  padding: 0 10px 0 10px;
+}
