@@ -1,28 +1,43 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import Image from "next/image";
-import "../components/Navbar/Navbar";
 import Navbar from "../components/Navbar/Navbar";
-import { useState, useEffect } from "react";
 import Footer from "@/components/Footer/Footer";
+import img from "../../public/backgroun1.png";
+import img2 from "../../public/background.png";
 import "./home.css";
-import img from "../../public/background.png";
 
 export default function Home() {
+  const [isMobile, setIsMobile] = useState(false);
+
   useEffect(() => {
-    import("preline");
+    // Check window width after component is mounted
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 600);
+    };
+
+    // Initial check
+    handleResize();
+
+    // Listen for window resize events
+    window.addEventListener("resize", handleResize);
+
+    // Clean up event listener on component unmount
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
   }, []);
   const styling = {
-    backgroundImage: `url(${img.src})`,
+    backgroundImage: `url(${isMobile ? img2.src : img.src})`,
     backgroundRepeat: "no-repeat",
     backgroundSize: "cover",
     backgroundPosition: "top",
-    height: "100vh",
+    height: "90vh",
     width: "100vw",
     display: "flex",
     justifyContent: "center",
   };
-
   return (
     <div>
       <Navbar />

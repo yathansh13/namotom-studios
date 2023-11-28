@@ -17,7 +17,7 @@ function Navbar() {
         <div class="flex items-center justify-between">
           <a
             class="logo inline-flex items-center gap-x-2 text-xl font-semibold dark:text-white"
-            href="#"
+            href="/"
           >
             <Image
               className="mx-5"
@@ -77,13 +77,13 @@ function Navbar() {
           <div class="flex flex-col gap-5 mt-5 sm:flex-row sm:items-center sm:justify-end sm:mt-0 sm:ps-5">
             <a
               class="logo2 font-medium text-gray-400 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
-              href="#"
+              href="/"
             >
               Home
             </a>
             <a
               class="logo2 font-medium text-gray-600 hover:text-gray-400 dark:text-gray-400 dark:hover:text-gray-500 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
-              href="#"
+              href="/about"
             >
               About us
             </a>
