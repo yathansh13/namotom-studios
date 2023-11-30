@@ -1,0 +1,28 @@
+{
+  "status": {
+    "live": [
+      {
+        "name": "Collision Course",
+        "description": "The fundraising roast event at Shiv Nadar IoE",
+        "imageUrl": "/projects/collision.svg"
+      },
+      {
+        "name": "The Senate",
+        "description": "The series follows the lives of a diverse group of students, each with their unique personalities, as they navigate their way through the trials and tribulations of student politics.",
+        "imageUrl": "/projects/senate.svg"
+      }
+    ],
+    "upcoming": [
+      {
+        "name": "In My Opinion",
+        "description": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+        "imageUrl": "/projects/imo.svg"
+      },
+      {
+        "name": "Pinchuk Patrika",
+        "description": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        "imageUrl": "/projects/pinchuk.svg"
+      }
+    ]
+  }
+}

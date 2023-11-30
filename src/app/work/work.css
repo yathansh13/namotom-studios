@@ -1,0 +1,52 @@
+.t8 {
+  color: #ea9b62;
+  margin-left: 50vw;
+  font-size: 4rem;
+}
+
+.main-body2 {
+  background-color: #f3f3cc;
+  display: flex;
+  flex-direction: column;
+  max-width: 100vw;
+  /* max-height: 120vh; */
+  align-items: center;
+}
+
+.projects {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5vh;
+}
+
+.projects-grid {
+  display: flex;
+  flex-direction: row;
+  gap: 5vw;
+  margin-bottom: 5vh;
+}
+
+.projects-head {
+  color: #402e32;
+  font-weight: 700;
+  font-size: 3rem;
+  font-family: "Montserrat";
+}
+
+@media only screen and (max-width: 600px) {
+  .t8 {
+    margin-left: 10vw;
+  }
+  .projects-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 5vh;
+  }
+  .projects {
+    margin-top: 5vh;
+  }
+  .projects-head {
+    text-align: center;
+  }
+}
