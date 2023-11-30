@@ -1,0 +1,50 @@
+[
+  {
+    "name": "Abhishek Akshat",
+    "jobTitle": "The Founder",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tristique fells non odio occumsan laoreet. Integer cursus libero placerat ex volutpat posuere. Quisque non nisi ultricies, volutpat mauris sed, venenatis dui. Integer eget eleifend augue, ac",
+    "imageUrl": "/employees/abhishek.png"
+  },
+  {
+    "name": "Aadi Sharma",
+    "jobTitle": "Job Title",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tristique fells non odio accumsan laoreet. Integer cursus libero placerat ex volutpat posuere. Quisque non nisi ultricies, volutpat mauris sed, venenatis dui. Integer eget eleifend augue, ac",
+    "imageUrl": "/employees/aadi.png"
+  },
+  {
+    "name": "Yathansh Sharma",
+    "jobTitle": "Developer",
+    "description": "The ultimate web wizard, content conjurer, and comedy maestro. Mastering the digital realm, he crafts stellar websites, weaves engaging content and sprinkles humor seamlessly.",
+    "imageUrl": "/employees/yathansh.png"
+  },
+  {
+    "name": "Kovid Vishrut",
+    "jobTitle": "Production manager",
+    "description": "Meet the maestro behind the scenes. Beyond flawless operations, he's the rebel photographer and fearless experimenter, turning logistics into an art and capturing the extraordinary through his lens. Cool, precise, and unstoppable.",
+    "imageUrl": "/employees/kovid.png"
+  },
+  {
+    "name": "Nikhil Khandelwal",
+    "jobTitle": "The Co-Founder",
+    "description": "Born to lead, he navigates the team's inner workings with a laid-back finesse, ensuring smooth sails. Juggling talents like a pro, Nikhil's the cool maestro preventing clashes and crushing deadlines with style. Team harmony? He's got it covered.",
+    "imageUrl": "/employees/nikhil.png"
+  },
+  {
+    "name": "Bhumik Bhatia",
+    "jobTitle": "B. D. ",
+    "description": "A skilled executive, he possesses a strong grasp of the industry and a successful history of cultivating strategic partnerships. He Demonstrates a dynamic approach to business expansion and excels in identifying growth opportunities.",
+    "imageUrl": "/employees/bhumik.png"
+  },
+  {
+    "name": "Manal Johri",
+    "jobTitle": "Content Strategist",
+    "description": "Say hello to the dynamo, Manaal Johri – Content Strategist, Actor, and Poetry Rizzler. With a cool mix of strategy, on-screen charisma, and poetic finesse, Manaal crafts content that resonates, performs on stage, and weaves words like a true rizzler. ",
+    "imageUrl": "/employees/manal.png"
+  },
+  {
+    "name": "Devyansh Chhonkar",
+    "jobTitle": "Editor",
+    "description": "He rocks diverse editing tools, effortlessly fusing creative vibes with technical wizardry. A proven maestro, Chhonkar cranks out top-tier content, leveling up projects with cutting-edge flair and innovation.",
+    "imageUrl": "/employees/devyansh.png"
+  }
+]

@@ -1,5 +1,8 @@
-@import url(https://db.onlinewebfonts.com/c/e47842169b17674250d3f8ed52cf53f8?family=Touche+W03+Semibold);
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Noto+Sans:wght@700&family=Open+Sans:wght@300&family=Red+Hat+Display:wght@500&display=swap");
 
+.h-screen {
+  height: 90vh;
+}
 .main-body {
   background-color: #f3f3cc;
   display: flex;
@@ -16,25 +19,6 @@
   max-width: 70vw;
 
   margin-top: 20vh;
-}
-
-.htext {
-  font-family: "Touche W03 Semibold";
-}
-
-.t1 {
-  color: #ffc400;
-  font-size: 2.8rem;
-  text-align: center;
-  margin-top: 8vh;
-}
-.t2 {
-  font-size: 1.1rem;
-}
-
-.t3 {
-  color: #f3f3cc;
-  font-size: 1.4rem;
 }
 
 .body-content {
@@ -75,8 +59,9 @@
 }
 
 .texx {
-  font-family: "Touche W03 Semibold";
+  font-family: "Montserrat";
   font-size: 3.5rem;
+  font-weight: 700;
 }
 
 .t6 {
@@ -102,7 +87,7 @@
   color: #402e32;
   font-weight: 700;
   font-size: 3rem;
-  font-family: "Touche W03 Semibold";
+  font-family: "Montserrat";
 }
 
 .s-body {
@@ -113,9 +98,70 @@
   font-weight: 200;
 }
 
+.team {
+  display: flex;
+  flex-direction: column;
+
+  gap: 3vh;
+  align-items: center;
+  margin-left: 10vw;
+  margin-bottom: 10vh;
+}
+
+.team-head {
+  color: #402e32;
+  font-weight: 700;
+  font-size: 3rem;
+  font-family: "Montserrat";
+  margin-right: 10vw;
+}
+
+.teamGrid {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 5vw;
+}
+
+.kahaani-content {
+  align-items: center;
+
+  max-width: 100vw;
+  gap: 10vw;
+  max-height: 100vh;
+  margin-bottom: 10vh;
+}
+
+.kahaani-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 40vw;
+  gap: 3vh;
+  max-height: 100vh;
+}
+
+.kahaani-head {
+  color: #402e32;
+  font-weight: 700;
+  font-size: 2.7rem;
+  font-family: "Montserrat";
+}
+
+.kahaani-body {
+  color: #263238;
+  line-height: 1.5rem;
+  font-size: 1rem;
+  max-width: 40vw;
+  font-weight: 200;
+}
+
 @media only screen and (max-width: 600px) {
+  .h-screen {
+    height: 45vh;
+  }
   .main-body {
-    max-height: 190vh;
+    height: 915vh;
   }
   .t1 {
     font-size: 1.8rem;
@@ -127,6 +173,34 @@
     max-width: 95vw;
   }
   .t4 {
+    text-align: center;
+  }
+  .header-text {
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+    max-width: 100vw;
+  }
+  .texx {
+    font-size: 2.6rem;
+  }
+  .t6 {
+    margin-left: 5vw;
+  }
+
+  .team {
+    margin-left: 0vw;
+    height: 100vh;
+  }
+  .teamGrid {
+    gap: 4vh;
+    margin-left: 4vw;
+  }
+  .kahaani-text {
+    max-width: 95vw;
+    align-items: center;
+  }
+  .kahaani-body {
+    max-width: 90vw;
     text-align: center;
   }
 }

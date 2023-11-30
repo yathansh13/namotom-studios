@@ -19,7 +19,8 @@
 }
 
 .htext {
-  font-family: "Touche W03 Semibold";
+  font-family: "Montserrat";
+  font-weight: 700;
 }
 
 .t1 {
@@ -82,7 +83,6 @@
     font-size: 1.8rem;
   }
   .project-grid {
-    display: none;
   }
   .body-content {
     max-width: 95vw;

@@ -1,0 +1,57 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Noto+Sans:wght@700&family=Open+Sans:wght@300&family=Red+Hat+Display:wght@500&display=swap");
+
+.employee-card {
+  display: flex;
+  flex-direction: row;
+  padding: 5px;
+  background-color: #fbdfae;
+  border-radius: 10px;
+  max-width: 38vw;
+  gap: 2vw;
+}
+
+.employee-info {
+  display: flex;
+  flex-direction: column;
+  max-width: 20vw;
+  margin-top: 1vh;
+}
+
+.et {
+  color: #402e32;
+  font-family: "montserrat";
+}
+
+.employee-name {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 0.2vh;
+}
+
+.employee-title {
+  font-size: 1rem;
+  margin-bottom: 1vh;
+}
+
+.employee-details {
+  font-size: 0.8rem;
+  font-weight: 400;
+}
+
+@media only screen and (max-width: 600px) {
+  .employee-card {
+    max-width: 90vw;
+    flex-direction: column;
+    align-items: center; /* Center items in the column */
+  }
+  .employee-info {
+    max-width: 90vw; /* Adjust the width for better responsiveness */
+    text-align: center; /* Center text in the column */
+    margin-top: 1rem; /* Adjust the margin for spacing */
+  }
+  .employee-card img {
+    width: 100%; /* Make the image take the full width of its container */
+    max-width: 90vw; /* Adjust the maximum width for better responsiveness */
+    height: auto; /* Maintain the aspect ratio */
+  }
+}
