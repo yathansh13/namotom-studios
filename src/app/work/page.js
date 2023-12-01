@@ -5,7 +5,7 @@ import Navbar from "../../components/Navbar/Navbar";
 import Footer from "../../components/Footer/Footer";
 import "./work.css";
 import img from "../../../public/backgroun1.png";
-import img2 from "../../../public/background.png";
+import img2 from "../../../public/backgroun2.svg";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import EventCard from "@/components/EventCard/EventCard";

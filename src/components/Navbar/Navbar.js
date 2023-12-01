@@ -1,13 +1,10 @@
-"use client";
-
 import "../Navbar/Navbar.css";
-import { useState, useEffect } from "react";
+
 import Image from "next/image";
 
+import "preline";
+
 function Navbar() {
-  useEffect(() => {
-    import("preline");
-  }, []);
   return (
     <header class="navb flex flex-wrap sm:justify-start sm:flex-nowrap z-50 w-full bg-white text-sm py-4  ">
       <nav
@@ -95,7 +92,8 @@ function Navbar() {
             </a>
             <a
               class="logo2 font-medium text-gray-600 hover:text-gray-400 dark:text-gray-400 dark:hover:text-gray-500 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
-              href="#"
+              href="mailto:hello@namotomstudios.co.in"
+              target="_blank"
             >
               Contact us
             </a>

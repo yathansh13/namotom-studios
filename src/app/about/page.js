@@ -5,7 +5,7 @@ import Image from "next/image";
 import Navbar from "../../components/Navbar/Navbar";
 import Footer from "@/components/Footer/Footer";
 import img from "../../../public/backgroun1.png";
-import img2 from "../../../public/background.png";
+import img2 from "../../../public/backgroun2.svg";
 import "./about.css";
 import EmployeeCard from "@/components/EmployeeCard/EmployeeCard";
 import employeeData from "../../../public/employees.json";
@@ -138,6 +138,7 @@ export default function Home() {
             {employeeData.map((employee, index) => (
               <EmployeeCard
                 key={index}
+                linkedin={employee.linkedinUrl}
                 name={employee.name}
                 title={employee.jobTitle}
                 details={employee.description}

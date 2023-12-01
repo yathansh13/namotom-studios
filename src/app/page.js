@@ -5,7 +5,7 @@ import Image from "next/image";
 import Navbar from "../components/Navbar/Navbar";
 import Footer from "@/components/Footer/Footer";
 import img from "../../public/backgroun1.png";
-import img2 from "../../public/background.png";
+import img2 from "../../public/backgroun2.svg";
 import "./home.css";
 
 export default function Home() {
@@ -28,16 +28,17 @@ export default function Home() {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
+
   const styling = {
     backgroundImage: `url(${isMobile ? img2.src : img.src})`,
     backgroundRepeat: "no-repeat",
     backgroundSize: "cover",
     backgroundPosition: "top",
-    height: "90vh",
     width: "100vw",
     display: "flex",
     justifyContent: "center",
   };
+
   return (
     <div>
       <Navbar />
@@ -48,10 +49,15 @@ export default function Home() {
               Are You Tired
               <br /> Of Watching The Same Old Clichés?
             </p>
-            <p className="htext t2">
-              You know the one where an unlikely group of misfits come together
-              to solve a mystery at the same time they help each other navigate
-              the ups and downs of life in a seemingly idyllic small town?
+            <p className=" htext t2">
+              You know the one where an unlikely group of
+              <p className=" htext t2">
+                misfits come together to solve a mystery at the same time
+              </p>
+              <p className="htext t2">
+                they help each other navigate the ups and downs of life in a
+                seemingly idyllic small town?
+              </p>
             </p>
             <p className="htext t3">
               Don’t worry. Even we got tired of it. So We Started...

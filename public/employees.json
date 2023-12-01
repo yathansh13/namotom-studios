@@ -2,49 +2,58 @@
   {
     "name": "Abhishek Akshat",
     "jobTitle": "The Founder",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tristique fells non odio occumsan laoreet. Integer cursus libero placerat ex volutpat posuere. Quisque non nisi ultricies, volutpat mauris sed, venenatis dui. Integer eget eleifend augue, ac",
-    "imageUrl": "/employees/abhishek.png"
-  },
-  {
-    "name": "Aadi Sharma",
-    "jobTitle": "Job Title",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tristique fells non odio accumsan laoreet. Integer cursus libero placerat ex volutpat posuere. Quisque non nisi ultricies, volutpat mauris sed, venenatis dui. Integer eget eleifend augue, ac",
-    "imageUrl": "/employees/aadi.png"
-  },
-  {
-    "name": "Yathansh Sharma",
-    "jobTitle": "Developer",
-    "description": "The ultimate web wizard, content conjurer, and comedy maestro. Mastering the digital realm, he crafts stellar websites, weaves engaging content and sprinkles humor seamlessly.",
-    "imageUrl": "/employees/yathansh.png"
-  },
-  {
-    "name": "Kovid Vishrut",
-    "jobTitle": "Production manager",
-    "description": "Meet the maestro behind the scenes. Beyond flawless operations, he's the rebel photographer and fearless experimenter, turning logistics into an art and capturing the extraordinary through his lens. Cool, precise, and unstoppable.",
-    "imageUrl": "/employees/kovid.png"
+    "description": "Meet Namotom. The man himself. The guy who dared to dream and walked the path less traveled. With his determination and never give up attitude he will make sure to achieve everything he dreamed of and have his name on every device.",
+    "imageUrl": "/employees/abhishek.png",
+    "linkedinUrl": "https://www.linkedin.com/in/abhishek-akshat/"
   },
   {
     "name": "Nikhil Khandelwal",
     "jobTitle": "The Co-Founder",
     "description": "Born to lead, he navigates the team's inner workings with a laid-back finesse, ensuring smooth sails. Juggling talents like a pro, Nikhil's the cool maestro preventing clashes and crushing deadlines with style. Team harmony? He's got it covered.",
-    "imageUrl": "/employees/nikhil.png"
+    "imageUrl": "/employees/nikhil.png",
+    "linkedinUrl": "https://www.linkedin.com/in/nikhil-khandelwal-5a208830/"
   },
   {
-    "name": "Bhumik Bhatia",
-    "jobTitle": "B. D. ",
-    "description": "A skilled executive, he possesses a strong grasp of the industry and a successful history of cultivating strategic partnerships. He Demonstrates a dynamic approach to business expansion and excels in identifying growth opportunities.",
-    "imageUrl": "/employees/bhumik.png"
+    "name": "Aadi Sharma",
+    "jobTitle": "Writer, Director",
+    "description": "Enter the realm of Sharma Ji ka beta. Armed with an inquisitive gaze, Aadi unveils the thought-provoking and hilarious side of 21st-century India. Brace yourself for a cool fusion of storytelling, where wit meets wisdom, and every frame is a revelation.",
+    "imageUrl": "/employees/aadi.png",
+    "linkedinUrl": "https://www.linkedin.com/in/aadi-sharma-59b2a91b9/"
   },
   {
-    "name": "Manal Johri",
+    "name": "Yathansh Sharma",
+    "jobTitle": "Developer",
+    "description": "The ultimate web wizard, content conjurer, and comedy maestro. Mastering the digital realm, he crafts stellar websites, weaves engaging content and sprinkles humor seamlessly.",
+    "imageUrl": "/employees/yathansh.png",
+    "linkedinUrl": "https://www.linkedin.com/in/yathansh-raj-sharma-644767219/"
+  },
+  {
+    "name": "Kovid Vishrut",
+    "jobTitle": "Production manager",
+    "description": "Meet the maestro behind the scenes. Beyond flawless operations, he's the rebel photographer and fearless experimenter, turning logistics into an art and capturing the extraordinary through his lens. Cool, precise, and unstoppable.",
+    "imageUrl": "/employees/kovid.png",
+    "linkedinUrl": "https://www.linkedin.com/in/kovid-vishrut-111941254/"
+  },
+
+  {
+    "name": "Manaal Johri",
     "jobTitle": "Content Strategist",
     "description": "Say hello to the dynamo, Manaal Johri – Content Strategist, Actor, and Poetry Rizzler. With a cool mix of strategy, on-screen charisma, and poetic finesse, Manaal crafts content that resonates, performs on stage, and weaves words like a true rizzler. ",
-    "imageUrl": "/employees/manal.png"
+    "imageUrl": "/employees/manal.png",
+    "linkedinUrl": "https://www.linkedin.com/in/manaal-johri-a65106286/"
   },
   {
     "name": "Devyansh Chhonkar",
     "jobTitle": "Editor",
     "description": "He rocks diverse editing tools, effortlessly fusing creative vibes with technical wizardry. A proven maestro, Chhonkar cranks out top-tier content, leveling up projects with cutting-edge flair and innovation.",
-    "imageUrl": "/employees/devyansh.png"
+    "imageUrl": "/employees/devyansh.png",
+    "linkedinUrl": "https://www.linkedin.com/in/devyansh-chhonkar-8a2718254/"
+  },
+  {
+    "name": "Bhumik Bhatia",
+    "jobTitle": "B. D. Eexecutive ",
+    "description": "Enter Bhumik, the Business Maverick. Cool, strategic, unstoppable. He rocks dynamic expansion, forges killer partnerships, and turns market insights into studio triumphs. ",
+    "imageUrl": "/employees/bhumik.png",
+    "linkedinUrl": "https://www.linkedin.com/in/bhumik-bhatia-5b88461aa/"
   }
 ]

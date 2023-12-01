@@ -42,7 +42,8 @@ function Footer() {
           <li class="inline-block relative pe-8 last:pe-0 last-of-type:before:hidden before:absolute before:top-1/2 before:end-3 before:-translate-y-1/2 before:content-['/'] before:text-gray-300 dark:before:text-gray-600">
             <a
               class="logo inline-flex gap-x-2 text-sm text-gray-500 hover:text-gray-800 dark:text-gray-500 dark:hover:text-gray-200 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
-              href="#"
+              href="mailto:hello@namotomstudios.co.in"
+              target="_blank"
             >
               Contact
             </a>
@@ -52,7 +53,8 @@ function Footer() {
         <div class="md:text-end space-x-2">
           <a
             class="w-8 h-8 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-full border border-transparent text-gray-500 hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
-            href="#"
+            href="https://www.facebook.com/namotomstudios"
+            target="_blank"
           >
             <Image
               src="./facebook.svg"
@@ -65,7 +67,8 @@ function Footer() {
           </a>
           <a
             class="w-8 h-8 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-full border border-transparent text-gray-500 hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
-            href="#"
+            href="https://twitter.com/NamotomStudios"
+            target="_blank"
           >
             <Image
               src="./twitter.svg"
@@ -78,7 +81,8 @@ function Footer() {
           </a>
           <a
             class="w-8 h-8 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-full border border-transparent text-gray-500 hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
-            href="#"
+            href="https://www.youtube.com/@namotomstudios9867"
+            target="_blank"
           >
             <Image
               src="./youtube.svg"
@@ -91,7 +95,8 @@ function Footer() {
           </a>
           <a
             class="w-8 h-8 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-full border border-transparent text-gray-500 hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
-            href="#"
+            href="https://www.linkedin.com/company/namotom-studios"
+            target="_blank"
           >
             <Image
               src="./linkedin.svg"
@@ -105,7 +110,8 @@ function Footer() {
 
           <a
             class="w-8 h-8 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-full border border-transparent text-gray-500 hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
-            href="#"
+            href="https://www.instagram.com/namotomstudios/"
+            target="_blank"
           >
             <Image
               src="./insta.svg"
