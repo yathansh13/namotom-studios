@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import dynamic from "next/dynamic"; // Import dynamic from 'next/dynamic' for client-side rendering
 import Navbar from "../components/Navbar/Navbar";
-import Footer from "@/components/Footer/Footer";
+import Footer from "../components/Footer/Footer";
 import img from "../../public/backgroun1.png";
 import img2 from "../../public/backgroun2.svg";
 import "./home.css";

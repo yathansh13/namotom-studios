@@ -8,14 +8,7 @@ function Navbar() {
   useEffect(() => {
     // Check if window is defined (running in the browser)
     if (typeof window !== "undefined") {
-      import("preline")
-        .then((preline) => {
-          // Use preline library here if needed
-          console.log("preline imported");
-        })
-        .catch((error) => {
-          console.error("Error importing preline:", error);
-        });
+      import("preline");
     }
   }, []);
 

@@ -3,11 +3,11 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import Navbar from "../../components/Navbar/Navbar";
-import Footer from "@/components/Footer/Footer";
+import Footer from "../../components/Footer/Footer";
 import img from "../../../public/backgroun1.png";
 import img2 from "../../../public/backgroun2.svg";
 import "./about.css";
-import EmployeeCard from "@/components/EmployeeCard/EmployeeCard";
+import EmployeeCard from "../../components/EmployeeCard/EmployeeCard";
 import employeeData from "../../../public/employees.json";
 import img3 from "../../../public/employees/1.svg";
 import img4 from "../../../public/employees/2.svg";

@@ -1,11 +1,9 @@
 "use client";
 
-import Image from "next/image";
 import Navbar from "../../components/Navbar/Navbar";
-import Footer from "@/components/Footer/Footer";
+import Footer from "../../components/Footer/Footer";
 import img from "../../../public/background.png";
-import React, { useState } from "react";
-import Head from "next/head";
+import React from "react";
 import ContactForm from "../../components/ContactForm/ContactForm";
 
 const getRandomImage = () => {
@@ -14,11 +12,7 @@ const getRandomImage = () => {
 };
 
 export default function Home() {
-  const [submitted, setSubmitted] = useState(false);
-
-  const handleSubmissionSuccess = () => {
-    setSubmitted(true);
-  };
+ 
 
   const styling = {
     backgroundImage: `url(${img.src})`,

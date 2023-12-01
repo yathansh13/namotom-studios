@@ -6,9 +6,9 @@ import Footer from "../../components/Footer/Footer";
 import "./work.css";
 import img from "../../../public/backgroun1.png";
 import img2 from "../../../public/backgroun2.svg";
-import Image from "next/image";
+
 import { useEffect, useState } from "react";
-import EventCard from "@/components/EventCard/EventCard";
+import EventCard from "../../components/EventCard/EventCard";
 import eventData from "../../../public/projects.json";
 
 export default function Home() {
