@@ -24,12 +24,14 @@ export default function Home() {
     handleResize();
 
     // Listen for window resize events
-    window.addEventListener("resize", handleResize);
+    if (typeof window !== "undefined") {
+      window.addEventListener("resize", handleResize);
 
-    // Clean up event listener on component unmount
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
+      // Clean up event listener on component unmount
+      return () => {
+        window.removeEventListener("resize", handleResize);
+      };
+    }
   }, []);
 
   const styling = {
@@ -77,16 +79,28 @@ export default function Home() {
           <div className="project-grid">
             <a href="#">
               {/* Use DynamicImage component for client-side rendering */}
-              <DynamicImage src="./imo.svg" height={300} width={300} />
+              {typeof window !== "undefined" && (
+                <DynamicImage src="./imo.svg" height={300} width={300} />
+              )}
             </a>
             <a href="#">
-              <DynamicImage src="./grillnchill.svg" height={300} width={300} />
+              {typeof window !== "undefined" && (
+                <DynamicImage
+                  src="./grillnchill.svg"
+                  height={300}
+                  width={300}
+                />
+              )}
             </a>
             <a href="#">
-              <DynamicImage src="./nh91.svg" height={300} width={300} />
+              {typeof window !== "undefined" && (
+                <DynamicImage src="./nh91.svg" height={300} width={300} />
+              )}
             </a>
             <a href="#">
-              <DynamicImage src="./pinchuk.svg" height={300} width={300} />
+              {typeof window !== "undefined" && (
+                <DynamicImage src="./pinchuk.svg" height={300} width={300} />
+              )}
             </a>
           </div>
           <div className="landing-button">
