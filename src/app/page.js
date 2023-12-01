@@ -1,12 +1,15 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import Image from "next/image";
+import dynamic from "next/dynamic"; // Import dynamic from 'next/dynamic' for client-side rendering
 import Navbar from "../components/Navbar/Navbar";
 import Footer from "@/components/Footer/Footer";
 import img from "../../public/backgroun1.png";
 import img2 from "../../public/backgroun2.svg";
 import "./home.css";
+
+// Use dynamic for client-side rendering of the Image component
+const DynamicImage = dynamic(() => import("next/image"), { ssr: false });
 
 export default function Home() {
   const [isMobile, setIsMobile] = useState(false);
@@ -73,16 +76,17 @@ export default function Home() {
           </p>
           <div className="project-grid">
             <a href="#">
-              <Image src="./imo.svg" height={300} width={300} />
+              {/* Use DynamicImage component for client-side rendering */}
+              <DynamicImage src="./imo.svg" height={300} width={300} />
             </a>
             <a href="#">
-              <Image src="./grillnchill.svg" height={300} width={300} />
+              <DynamicImage src="./grillnchill.svg" height={300} width={300} />
             </a>
             <a href="#">
-              <Image src="./nh91.svg" height={300} width={300} />
+              <DynamicImage src="./nh91.svg" height={300} width={300} />
             </a>
             <a href="#">
-              <Image src="./pinchuk.svg" height={300} width={300} />
+              <DynamicImage src="./pinchuk.svg" height={300} width={300} />
             </a>
           </div>
           <div className="landing-button">
