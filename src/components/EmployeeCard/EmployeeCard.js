@@ -1,3 +1,5 @@
+"use client";
+
 import "./EmployeeCard.css";
 import Image from "next/image";
 

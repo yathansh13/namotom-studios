@@ -1,8 +1,10 @@
 "use client";
 
 import { useState } from "react";
-import Image from "next/image";
+import dynamic from "next/dynamic";
 import "./Navbar.css";
+
+const Image = dynamic(() => import("next/image"), { ssr: false });
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
