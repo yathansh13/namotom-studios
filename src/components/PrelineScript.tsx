@@ -1,14 +1,14 @@
-// "use client";
+"use client";
 
-// import { usePathname } from "next/navigation";
-// import { useEffect } from "react";
+import { usePathname } from "next/navigation";
+import { useEffect } from "react";
 
-// export default function PrelineScript() {
-//   const path = usePathname();
+export default function PrelineScript() {
+  const path = usePathname();
 
-//   useEffect(() => {
-//     import("preline/preline");
-//   }, []);
+  useEffect(() => {
+    import("preline/preline");
+  }, []);
 
 //   useEffect(() => {
 //     setTimeout(() => {
@@ -16,5 +16,5 @@
 //     }, 100);
 //   }, [path]);
 
-//   return null;
-// }
+  return null;
+}

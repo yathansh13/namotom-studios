@@ -20,7 +20,7 @@
 .typewriter {
   color: #fff;
   font-family: monospace;
-  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  overflow: hidden;
   border-right: 0.15em solid orange; /* The typwriter cursor */
   white-space: nowrap; /* Keeps the content on a single line */
   margin: 0 auto; /* Gives that scrolling effect as the typing happens */
@@ -64,6 +64,14 @@
   text-align: center;
 }
 
+.htext2 {
+  font-family: "Montserrat";
+  font-weight: 700;
+  text-align: center;
+  font-size: 1.1rem;
+  color: #f3f3cc;
+}
+
 .t1 {
   color: #ffc400;
   font-size: 2.8rem;
@@ -72,6 +80,7 @@
 }
 .t2 {
   font-size: 1.1rem;
+  display: none;
 }
 
 .t3 {
@@ -118,7 +127,9 @@
 
 @media only screen and (max-width: 600px) {
   .header-text {
-    gap: 5vh;
+    max-width: 100vw;
+    gap: 3vh;
+    margin-top: -3vh;
   }
   .hscreen {
     height: 100vh;
@@ -139,6 +150,11 @@
     margin-top: -2vh;
   }
   .typewriter {
+    white-space: normal;
+    font-size: 0.1rem; /* adjust as needed */
+    animation: typing 2s steps(40, end), blink-caret 0.75s step-end infinite; /* adjust as needed */
+  }
+  .t2 {
     display: none;
   }
 }

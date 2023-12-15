@@ -3,7 +3,7 @@
 .employee-card {
   display: flex;
   flex-direction: row;
-  padding: 5px;
+  padding: 10px;
   background-color: #fbdfae;
   border-radius: 10px;
   max-width: 38vw;

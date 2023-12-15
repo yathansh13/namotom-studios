@@ -2,6 +2,10 @@
 
 .navb {
   background-color: #402e32;
+  max-width: 98vw;
+  margin-left: 1vw;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
 }
 
 .logo {
@@ -14,4 +18,13 @@
   font-size: 1rem;
   color: #f3f3cc;
   padding: 0 10px 0 10px;
+}
+
+@media only screen and (max-width: 600px) {
+  .navb {
+    max-width: 100vw;
+    margin-left: 0;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
 }

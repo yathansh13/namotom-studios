@@ -1,23 +1,19 @@
 "use client";
 
-import "../Navbar/Navbar.css";
+import { useState } from "react";
 import Image from "next/image";
-import React, { useEffect } from "react";
+import "./Navbar.css";
 
 function Navbar() {
-  useEffect(() => {
-    // Check if window is defined (running in the browser)
-    if (typeof window !== "undefined") {
-      import("preline");
-    }
-  }, []);
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
 
   return (
-    <header className="navb flex flex-wrap sm:justify-start sm:flex-nowrap z-50 w-full bg-white text-sm py-4  ">
-      <nav
-        className="max-w-[85rem] w-full mx-auto px-4 sm:flex sm:items-center sm:justify-between"
-        aria-label="Global"
-      >
+    <header className="navb flex flex-wrap sm:justify-start sm:flex-nowrap z-50 w-full bg-white text-sm py-4 transition-all duration-500 ease-in-out sm:fixed sm:top-0">
+      <nav className="max-w-[85rem] w-full mx-auto px-4 sm:flex sm:items-center sm:justify-between">
         <div className="flex items-center justify-between">
           <a
             className="logo inline-flex items-center gap-x-2 text-xl font-semibold dark:text-white"
@@ -34,11 +30,9 @@ function Navbar() {
           </a>
           <div className="sm:hidden">
             <button
+              onClick={toggleMenu}
               type="button"
-              className="hs-collapse-toggle p-2 inline-flex justify-center items-center gap-x-2 rounded-lg border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-transparent dark:border-gray-700 dark:text-white dark:hover:bg-white/10 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
-              data-hs-collapse="#navbar-image-and-text-1"
-              aria-controls="navbar-image-and-text-1"
-              aria-label="Toggle navigation"
+              className="p-2 inline-flex justify-center items-center gap-x-2 rounded-lg border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-transparent dark:border-gray-700 dark:text-white dark:hover:bg-white/10 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
             >
               <svg
                 className="hs-collapse-open:hidden flex-shrink-0 w-4 h-4"
@@ -75,8 +69,9 @@ function Navbar() {
           </div>
         </div>
         <div
-          id="navbar-image-and-text-1"
-          className="hs-collapse hidden overflow-hidden transition-all duration-300 basis-full grow sm:block"
+          className={`mt-5 sm:mt-0 ${
+            isOpen ? "block" : "hidden"
+          } sm:flex transition-all duration-500 ease-in-out`}
         >
           <div className="flex flex-col gap-5 mt-5 sm:flex-row sm:items-center sm:justify-end sm:mt-0 sm:ps-5">
             <a
@@ -97,13 +92,13 @@ function Navbar() {
             >
               Our Work
             </a>
-            <a
+            {/* <a
               className="logo2 font-medium text-gray-600 hover:text-gray-400 dark:text-gray-400 dark:hover:text-gray-500 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
               href="mailto:hello@namotomstudios.co.in"
               target="_blank"
             >
               Contact us
-            </a>
+            </a> */}
           </div>
         </div>
       </nav>

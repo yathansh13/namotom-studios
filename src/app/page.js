@@ -54,15 +54,23 @@ export default function Home() {
               Are You Tired
               <br /> Of Watching The Same Old Clichés?
             </p>
+            <p className="typewriter">
+              <p className="htext2">
+                You know the one where an unlikely group of misfits come
+                together
+              </p>
+              <p className="htext2">
+                to solve a mystery at the same time they help each other
+                navigate
+              </p>
+              <p className="htext2">
+                the ups and downs of life in a seemingly idyllic small town?
+              </p>
+            </p>
             <p className=" htext t2">
-              You know the one where an unlikely group of
-              <p className=" htext t2">
-                misfits come together to solve a mystery at the same time
-              </p>
-              <p className="htext t2">
-                they help each other navigate the ups and downs of life in a
-                seemingly idyllic small town?
-              </p>
+              You know the one where an unlikely group of misfits come together
+              to solve a mystery at the same time they help each other navigate
+              the ups and downs of life in a seemingly idyllic small town?
             </p>
             <p className="htext t3">
               Don’t worry. Even we got tired of it. So We Started...
