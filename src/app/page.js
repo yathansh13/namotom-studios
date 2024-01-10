@@ -112,7 +112,10 @@ export default function Home() {
             </a>
           </div>
           <div className="landing-button">
-            <a className="htext bg-yellow-900 hover:bg-orange-700 text-white font-bold py-4  px-10 rounded-full">
+            <a
+              href="/work"
+              className="htext bg-yellow-900 hover:bg-orange-700 text-white font-bold py-4  px-10 rounded-full"
+            >
               Check out our work
             </a>
           </div>

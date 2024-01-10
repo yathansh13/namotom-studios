@@ -1,5 +1,5 @@
 .t8 {
-  color: #ea9b62;
+  color: #ffc400;
   margin-left: 50vw;
   font-size: 4rem;
 }
@@ -23,8 +23,10 @@
 .projects-grid {
   display: flex;
   flex-direction: row;
-  gap: 5vw;
+  flex-wrap: wrap;
+  gap: 2vw;
   margin-bottom: 5vh;
+  width: 80vw;
 }
 
 .projects-head {

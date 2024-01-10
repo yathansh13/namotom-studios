@@ -8,7 +8,9 @@ import img from "../../../public/backgroun1.png";
 import img2 from "../../../public/backgroun2.svg";
 
 import { useEffect, useState } from "react";
-import EventCard from "../../components/EventCard/EventCard";
+import EventCard from "../../components/EventCardLive/EventCardLive";
+import EventCardReleasing from "../../components/EventCardReleasing/EventCardReleasing";
+import EventCardSoon from "../../components/EventCardSoon/EventCardSoon";
 import eventData from "../../../public/projects.json";
 
 export default function Home() {
@@ -60,6 +62,19 @@ export default function Home() {
               <EventCard
                 key={index}
                 name={project.name}
+                img={project.imageUrl}
+              />
+            ))}
+          </div>
+        </div>
+
+        <div className="projects">
+          <p className="projects-head">Our Live Projects</p>
+          <div className="projects-grid">
+            {eventData.status.releasing.map((project, index) => (
+              <EventCardReleasing
+                key={index}
+                name={project.name}
                 details={project.description}
                 img={project.imageUrl}
               />
@@ -71,10 +86,9 @@ export default function Home() {
           <p className="projects-head">Our Upcoming Projects</p>
           <div className="projects-grid">
             {eventData.status.upcoming.map((project, index) => (
-              <EventCard
+              <EventCardSoon
                 key={index}
                 name={project.name}
-                details={project.description}
                 img={project.imageUrl}
               />
             ))}

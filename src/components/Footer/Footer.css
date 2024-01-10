@@ -1,7 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Noto+Sans:wght@700&family=Open+Sans:wght@300&family=Red+Hat+Display:wght@500&display=swap");
 
 .footerb {
+  max-width: 99%;
+  margin-left: 0.5vw;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
   background-color: #402e32;
+}
+
+.footerbg {
+  background-color: #f3f3cc;
 }
 
 .logo {

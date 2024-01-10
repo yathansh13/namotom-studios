@@ -1,0 +1,76 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Noto+Sans:wght@700&family=Open+Sans:wght@300&family=Red+Hat+Display:wght@500&display=swap");
+
+.event-card1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 4px;
+  background-color: #fbdfae;
+  border-radius: 5px;
+  width: 25vw;
+  height: 50vh;
+}
+
+.event-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 40vw;
+  margin-top: 1vh;
+  margin-bottom: 1vh;
+}
+
+.et {
+  color: #402e32;
+  font-family: "montserrat";
+}
+
+.event-name {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 0.2vh;
+}
+
+.event-title {
+  font-size: 1rem;
+  margin-bottom: 1vh;
+}
+
+.event-details {
+  margin-top: 1vh;
+  font-size: 0.8rem;
+  font-weight: 400;
+  text-align: center;
+}
+
+.landing-button {
+  border-radius: 100%;
+  color: #ffc400;
+  padding: 10px;
+  margin-bottom: 1vh;
+  cursor: pointer;
+}
+
+.htext {
+  font-family: "Montserrat";
+  font-weight: 400;
+}
+
+@media only screen and (max-width: 600px) {
+  .event-card {
+    max-width: 90vw;
+    flex-direction: column;
+    align-items: center; /* Center items in the column */
+  }
+  .event-info {
+    max-width: 90vw; /* Adjust the width for better responsiveness */
+    text-align: center; /* Center text in the column */
+    margin-top: 1rem; /* Adjust the margin for spacing */
+  }
+  .event-card img {
+    width: 100%; /* Make the image take the full width of its container */
+    max-width: 90vw; /* Adjust the maximum width for better responsiveness */
+    height: auto; /* Maintain the aspect ratio */
+  }
+}

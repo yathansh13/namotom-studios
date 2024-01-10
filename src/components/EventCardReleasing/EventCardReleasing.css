@@ -4,10 +4,12 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-around;
   padding: 4px;
   background-color: #fbdfae;
   border-radius: 5px;
-  max-width: 36vw;
+  max-width: 25vw;
+  height: 60vh;
 }
 
 .event-info {
@@ -43,6 +45,8 @@
 }
 
 .landing-button {
+  border-radius: 100%;
+  color: #ffc400;
   padding: 10px;
   margin-bottom: 1vh;
   cursor: pointer;
