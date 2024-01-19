@@ -22,12 +22,9 @@ export default function EventCard(props) {
         <p className="et event-name">{props.name}</p>
       </div>
       <div className="landing-button">
-        <a
-          target="_blank"
-          href="https://www.youtube.com/watch?v=0472LpvNNgc&t=311s&ab_channel=NamotomStudios"
-        >
+        <a href={props.linkto} target={props.target}>
           <button className="htext bg-yellow-900 hover:bg-orange-700 text-white font-bold py-3 px-9 rounded">
-            Watch Now
+            {props.buttontext}
           </button>
         </a>
       </div>

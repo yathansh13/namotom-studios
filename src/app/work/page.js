@@ -63,6 +63,9 @@ export default function Home() {
                 key={index}
                 name={project.name}
                 img={project.imageUrl}
+                linkto={project.link}
+                buttontext="Watch Now"
+                target="_blank"
               />
             ))}
           </div>
