@@ -1,99 +1,146 @@
-"use client";
-
+import {
+  Button,
+  Container,
+  FormControl,
+  FormErrorMessage,
+  FormLabel,
+  Heading,
+  Input,
+  Text,
+  Textarea,
+  useToast,
+} from "@chakra-ui/react";
 import { useState } from "react";
+import { sendContactForm } from "../../lib/api";
+
+const initValues = { name: "", email: "", subject: "", message: "" };
+
+const initState = { isLoading: false, error: "", values: initValues };
 
 export default function ContactForm() {
-  const [loading, setLoading] = useState(false);
+  const toast = useToast();
+  const [state, setState] = useState(initState);
+  const [touched, setTouched] = useState({});
 
-  async function handleSubmit(event) {
-    event.preventDefault();
-    setLoading(true);
+  const { values, isLoading, error } = state;
 
-    const data = {
-      name: String(event.target.name.value),
-      email: String(event.target.email.value),
-      message: String(event.target.message.value),
-    };
+  const onBlur = ({ target }) =>
+    setTouched((prev) => ({ ...prev, [target.name]: true }));
 
+  const handleChange = ({ target }) =>
+    setState((prev) => ({
+      ...prev,
+      values: {
+        ...prev.values,
+        [target.name]: target.value,
+      },
+    }));
+
+  const onSubmit = async () => {
+    setState((prev) => ({
+      ...prev,
+      isLoading: true,
+    }));
     try {
-      const response = await fetch("src/app/api/contact", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(data),
+      await sendContactForm(values);
+      setTouched({});
+      setState(initState);
+      toast({
+        title: "Message sent.",
+        status: "success",
+        duration: 2000,
+        position: "top",
       });
-
-      if (response.ok) {
-        console.log("Message sent successfully");
-        setLoading(false);
-        // reset the form
-        event.target.name.value = "";
-        event.target.email.value = "";
-        event.target.message.value = "";
-      } else {
-        console.log(
-          "Error sending message:",
-          response.status,
-          response.statusText
-        );
-        setLoading(false);
-      }
     } catch (error) {
-      console.error("Error during fetch:", error);
-      setLoading(false);
+      setState((prev) => ({
+        ...prev,
+        isLoading: false,
+        error: error.message,
+      }));
     }
-  }
+  };
+
   return (
-    <form onSubmit={handleSubmit}>
-      <div className="w-full flex flex-col my-4">
-        <label className="font-bold text-gray-800" htmlFor="name">
-          Name
-        </label>
-        <input
+    <Container maxW="450px" mt={12}>
+      <Heading>Contact</Heading>
+      {error && (
+        <Text color="red.300" my={4} fontSize="xl">
+          {error}
+        </Text>
+      )}
+
+      <FormControl isRequired isInvalid={touched.name && !values.name} mb={5}>
+        <FormLabel>Name</FormLabel>
+        <Input
           type="text"
-          minLength={3}
-          maxLength={150}
-          required
-          className=" p-4 bg-gray-50 border border-gray-100 "
-          autoComplete="off"
-          id="name"
+          name="name"
+          errorBorderColor="red.300"
+          value={values.name}
+          onChange={handleChange}
+          onBlur={onBlur}
         />
-      </div>
-      <div className="w-full flex flex-col my-4">
-        <label className="font-bold text-gray-800" htmlFor="email">
-          Email
-        </label>
-        <input
+        <FormErrorMessage>Required</FormErrorMessage>
+      </FormControl>
+
+      <FormControl isRequired isInvalid={touched.email && !values.email} mb={5}>
+        <FormLabel>Email</FormLabel>
+        <Input
           type="email"
-          minLength={5}
-          maxLength={150}
-          required
-          className=" p-4 bg-gray-50 border border-gray-100 "
-          autoComplete="off"
-          id="email"
+          name="email"
+          errorBorderColor="red.300"
+          value={values.email}
+          onChange={handleChange}
+          onBlur={onBlur}
         />
-      </div>
-      <div>
-        <label className="font-bold text-gray-800" htmlFor="message">
-          Message
-        </label>
-        <textarea
-          rows={4}
-          required
-          minLength={10}
-          maxLength={500}
-          name="message"
-          className="w-full p-4 bg-gray-50 border border-gray-100 "
-        />
-      </div>
-      <button
-        type="submit"
-        disabled={loading}
-        className="px-4 py-2 w-40 bg-gray-700 disabled:bg-gray-400 disabled:text-gray-100 text-white font-medium mt-4"
+        <FormErrorMessage>Required</FormErrorMessage>
+      </FormControl>
+
+      <FormControl
+        mb={5}
+        isRequired
+        isInvalid={touched.subject && !values.subject}
       >
-        Send Message
-      </button>
-    </form>
+        <FormLabel>Subject</FormLabel>
+        <Input
+          type="text"
+          name="subject"
+          errorBorderColor="red.300"
+          value={values.subject}
+          onChange={handleChange}
+          onBlur={onBlur}
+        />
+        <FormErrorMessage>Required</FormErrorMessage>
+      </FormControl>
+
+      <FormControl
+        isRequired
+        isInvalid={touched.message && !values.message}
+        mb={5}
+      >
+        <FormLabel>Message</FormLabel>
+        <Textarea
+          type="text"
+          name="message"
+          rows={4}
+          errorBorderColor="red.300"
+          value={values.message}
+          onChange={handleChange}
+          onBlur={onBlur}
+        />
+        <FormErrorMessage>Required</FormErrorMessage>
+      </FormControl>
+
+      <Button
+        variant="outline"
+        colorScheme="blue"
+        isLoading={isLoading}
+        disabled={
+          !values.name || !values.email || !values.subject || !values.message
+        }
+        onClick={onSubmit}
+      >
+        Submit
+      </Button>
+    </Container>
   );
 }

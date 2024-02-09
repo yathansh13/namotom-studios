@@ -1,10 +1,10 @@
 "use client";
 
-import "./Footer.css";
+import "./FooterBlack.css";
 import { useEffect, useState } from "react";
 import Image from "next/image";
 
-function Footer() {
+function FooterBlack() {
   useEffect(() => {
     require("preline");
   }, []);
@@ -188,4 +188,4 @@ function Footer() {
   );
 }
 
-export default Footer;
+export default FooterBlack;

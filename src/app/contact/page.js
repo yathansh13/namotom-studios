@@ -1,19 +1,19 @@
 "use client";
 
 import Navbar from "../../components/Navbar/Navbar";
-import Footer from "../../components/Footer/Footer";
+import FooterBlack from "../../components/FooterBlack/FooterBlack";
 import img from "../../../public/background.png";
 import React from "react";
+import "./contact.css";
 import ContactForm from "../../components/ContactForm/ContactForm";
+import { useState } from "react";
 
 const getRandomImage = () => {
   const randomIndex = Math.floor(Math.random() * 3) + 1;
   return `/employees/${randomIndex}.svg`;
 };
 
-export default function Home() {
- 
-
+export default function Contact() {
   const styling = {
     backgroundImage: `url(${img.src})`,
     backgroundRepeat: "no-repeat",
@@ -25,26 +25,50 @@ export default function Home() {
     justifyContent: "center",
   };
 
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    const response = await fetch("/api/sendEmail", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formData),
+    });
+
+    if (response.ok) {
+      // Handle success
+    } else {
+      // Handle error
+    }
+  };
+
   return (
     <div>
       <Navbar />
       <div style={styling}>
-        <div className="main-div flex items-center">
-          <div className="left-div">
-            <ContactForm />
-          </div>
-
-          {/* Right side: Random image */}
-          <div className="flex-shrink-0">
-            <img
-              src={getRandomImage()}
-              alt="Random Employee"
-              className="w-72 h-72"
-            />
-          </div>
+        <div className="main-div">
+          <h1>Contact Us</h1>
+          <ContactForm />
         </div>
+
+        {/* Right side: Random image */}
       </div>
-      <Footer />
+      <FooterBlack />
     </div>
   );
 }
