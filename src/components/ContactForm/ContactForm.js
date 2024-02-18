@@ -1,146 +1,67 @@
-import {
-  Button,
-  Container,
-  FormControl,
-  FormErrorMessage,
-  FormLabel,
-  Heading,
-  Input,
-  Text,
-  Textarea,
-  useToast,
-} from "@chakra-ui/react";
-import { useState } from "react";
-import { sendContactForm } from "../../lib/api";
+import React, { useState } from "react";
+import emailjs from "emailjs-com";
+import "./ContactForm.css";
 
-const initValues = { name: "", email: "", subject: "", message: "" };
+const ContactForm = () => {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
 
-const initState = { isLoading: false, error: "", values: initValues };
+  const handleSubmit = (e) => {
+    e.preventDefault();
 
-export default function ContactForm() {
-  const toast = useToast();
-  const [state, setState] = useState(initState);
-  const [touched, setTouched] = useState({});
+    // Your EmailJS service ID
+    const serviceId = "service_xgqzzga";
+    // Your EmailJS template ID
+    const templateId = "template_w16dujw";
 
-  const { values, isLoading, error } = state;
+    const userId = "LmIbFNq-I2uYhPIjN";
 
-  const onBlur = ({ target }) =>
-    setTouched((prev) => ({ ...prev, [target.name]: true }));
-
-  const handleChange = ({ target }) =>
-    setState((prev) => ({
-      ...prev,
-      values: {
-        ...prev.values,
-        [target.name]: target.value,
-      },
-    }));
-
-  const onSubmit = async () => {
-    setState((prev) => ({
-      ...prev,
-      isLoading: true,
-    }));
-    try {
-      await sendContactForm(values);
-      setTouched({});
-      setState(initState);
-      toast({
-        title: "Message sent.",
-        status: "success",
-        duration: 2000,
-        position: "top",
+    // Sending the email
+    emailjs
+      .send(
+        serviceId,
+        templateId,
+        {
+          from_name: name,
+          from_email: email,
+          message: message,
+        },
+        userId
+      )
+      .then((response) => {
+        console.log("Email sent successfully:", response);
+        // Clearing the form after successful submission
+        setName("");
+        setEmail("");
+        setMessage("");
+      })
+      .catch((error) => {
+        console.error("Error sending email:", error);
       });
-    } catch (error) {
-      setState((prev) => ({
-        ...prev,
-        isLoading: false,
-        error: error.message,
-      }));
-    }
   };
-
   return (
-    <Container maxW="450px" mt={12}>
-      <Heading>Contact</Heading>
-      {error && (
-        <Text color="red.300" my={4} fontSize="xl">
-          {error}
-        </Text>
-      )}
-
-      <FormControl isRequired isInvalid={touched.name && !values.name} mb={5}>
-        <FormLabel>Name</FormLabel>
-        <Input
-          type="text"
-          name="name"
-          errorBorderColor="red.300"
-          value={values.name}
-          onChange={handleChange}
-          onBlur={onBlur}
-        />
-        <FormErrorMessage>Required</FormErrorMessage>
-      </FormControl>
-
-      <FormControl isRequired isInvalid={touched.email && !values.email} mb={5}>
-        <FormLabel>Email</FormLabel>
-        <Input
-          type="email"
-          name="email"
-          errorBorderColor="red.300"
-          value={values.email}
-          onChange={handleChange}
-          onBlur={onBlur}
-        />
-        <FormErrorMessage>Required</FormErrorMessage>
-      </FormControl>
-
-      <FormControl
-        mb={5}
-        isRequired
-        isInvalid={touched.subject && !values.subject}
-      >
-        <FormLabel>Subject</FormLabel>
-        <Input
-          type="text"
-          name="subject"
-          errorBorderColor="red.300"
-          value={values.subject}
-          onChange={handleChange}
-          onBlur={onBlur}
-        />
-        <FormErrorMessage>Required</FormErrorMessage>
-      </FormControl>
-
-      <FormControl
-        isRequired
-        isInvalid={touched.message && !values.message}
-        mb={5}
-      >
-        <FormLabel>Message</FormLabel>
-        <Textarea
-          type="text"
-          name="message"
-          rows={4}
-          errorBorderColor="red.300"
-          value={values.message}
-          onChange={handleChange}
-          onBlur={onBlur}
-        />
-        <FormErrorMessage>Required</FormErrorMessage>
-      </FormControl>
-
-      <Button
-        variant="outline"
-        colorScheme="blue"
-        isLoading={isLoading}
-        disabled={
-          !values.name || !values.email || !values.subject || !values.message
-        }
-        onClick={onSubmit}
-      >
-        Submit
-      </Button>
-    </Container>
+    <form className="contact-form" onSubmit={handleSubmit}>
+      <input
+        type="text"
+        value={name}
+        placeholder="Your Name"
+        onChange={(e) => setName(e.target.value)}
+      />
+      <input
+        type="email"
+        value={email}
+        placeholder="Your Email"
+        onChange={(e) => setEmail(e.target.value)}
+      />
+      <textarea
+        value={message}
+        placeholder="Your Message"
+        onChange={(e) => setMessage(e.target.value)}
+      />
+      <button type="submit">Send Email</button>
+    </form>
   );
-}
+};
+
+export default ContactForm;
