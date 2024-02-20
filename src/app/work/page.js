@@ -4,8 +4,9 @@ import "../about/about.css";
 import Navbar from "../../components/Navbar/Navbar";
 import Footer from "../../components/Footer/Footer";
 import "./work.css";
-import img from "../../../public/backgroun1.png";
+import img1 from "../../../public/background.png";
 import img2 from "../../../public/backgroun2.svg";
+import img3 from "../../../public/bg-overlay.png";
 
 import { useEffect, useState } from "react";
 import EventCard from "../../components/EventCardLive/EventCardLive";
@@ -34,7 +35,16 @@ export default function Home() {
     };
   }, []);
   const styling = {
-    backgroundImage: `url(${isMobile ? img2.src : img.src})`,
+    backgroundImage: `url(${img3.src}), url(${img1.src}) `,
+    backgroundRepeat: "no-repeat",
+    backgroundSize: "contain, cover",
+    backgroundPosition: "bottom, top",
+    width: "100vw",
+    display: "flex",
+    justifyContent: "flex-start",
+  };
+  const mobStyle = {
+    backgroundImage: `url(${img2.src})`,
     backgroundRepeat: "no-repeat",
     backgroundSize: "cover",
     backgroundPosition: "top",
@@ -48,7 +58,7 @@ export default function Home() {
     <div>
       <Navbar />
       <div className="main-body2">
-        <div className="h-screen" style={styling}>
+        <div className="h-screen" style={isMobile ? mobStyle : styling}>
           <div className="header-text">
             <p className="texx t6">Lights! Camera!</p>
             <p className="texx t8"> ACTION!</p>

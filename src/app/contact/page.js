@@ -1,9 +1,9 @@
 "use client";
 
+import React, { useState, useEffect } from "react";
 import Navbar from "../../components/Navbar/Navbar";
 import FooterBlack from "../../components/FooterBlack/FooterBlack";
 import img from "../../../public/background.png";
-import React, { useState, useEffect } from "react";
 import "./contact.css";
 
 import emailjs from "emailjs-com";
@@ -33,10 +33,15 @@ export default function Contact() {
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
+  const [imageLoading, setImageLoading] = useState(true);
 
   useEffect(() => {
     setRandomImage(getRandomImage());
   }, []);
+
+  const handleImageLoad = () => {
+    setImageLoading(false);
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -58,6 +63,7 @@ export default function Contact() {
         serviceId,
         templateId,
         {
+          to_name: "Abhishek",
           from_name: name,
           from_email: email,
           message: message,
@@ -91,9 +97,10 @@ export default function Contact() {
             <div className="flex-shrink-0">
               <img
                 src={randomImage}
-                alt="Random Employee"
                 className="emp-image"
+                onLoad={handleImageLoad}
               />
+              {imageLoading && <div className="loader"></div>}
             </div>
             <p className="thank-you-message">Thank you for your message!</p>
             <a className="back-button" href="/">
@@ -139,9 +146,11 @@ export default function Contact() {
               <div className="flex-shrink-0">
                 <img
                   src={randomImage}
-                  alt="Random Employee"
+                  alt=""
                   className="emp-image"
+                  onLoad={handleImageLoad}
                 />
+                {imageLoading && <div className="loader"></div>}
               </div>
             </div>
             {error && <p className="error-msg">{error}</p>}

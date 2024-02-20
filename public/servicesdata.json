@@ -1,18 +1,18 @@
 [
   {
     "name": "Capturing Moments, Crafting Memories",
-    "link": "/moments",
+    "link": "/service/moments",
 
     "imageUrl": "/services/capture.svg"
   },
   {
     "name": "Elevate Your Brand Narrative",
-    "link": "/narrative",
+    "link": "/service/narrative",
     "imageUrl": "/services/elevate.svg"
   },
   {
     "name": "Beyond Boundaries, Beyond Conventions",
-    "link": "/beyond",
+    "link": "/service/beyond",
     "imageUrl": "/services/beyond.svg"
   }
 ]
