@@ -4,8 +4,9 @@ import { useEffect, useState } from "react";
 import dynamic from "next/dynamic"; // Import dynamic from 'next/dynamic' for client-side rendering
 import Navbar from "../components/Navbar/Navbar";
 import Footer from "../components/Footer/Footer";
-import img from "../../public/backgroun1.png";
+import img1 from "../../public/background.png";
 import img2 from "../../public/backgroun2.svg";
+import img3 from "../../public/bg-overlay.png";
 import "./home.css";
 
 // Use dynamic for client-side rendering of the Image component
@@ -35,20 +36,30 @@ export default function Home() {
   }, []);
 
   const styling = {
-    backgroundImage: `url(${isMobile ? img2.src : img.src})`,
+    backgroundImage: `url(${img3.src}), url(${img1.src}) `,
     backgroundRepeat: "no-repeat",
-    backgroundSize: "cover",
-    backgroundPosition: "top",
+    backgroundSize: "contain, cover",
+    backgroundPosition: "bottom, top",
     width: "100vw",
     display: "flex",
     justifyContent: "center",
+  };
+  const mobStyle = {
+    backgroundImage: `url(${img2.src})`,
+    backgroundRepeat: "no-repeat",
+    backgroundSize: "cover",
+    backgroundPosition: "top",
+
+    width: "100vw",
+    display: "flex",
+    justifyContent: "flex-start",
   };
 
   return (
     <div>
       <Navbar />
       <div className="main-body">
-        <div className="h-screen" style={styling}>
+        <div className="h-screen" style={isMobile ? mobStyle : styling}>
           <div className="header-text">
             <p className="htext t1">
               Are You Tired

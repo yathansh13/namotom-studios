@@ -1,99 +1,67 @@
-"use client";
+import React, { useState } from "react";
+import emailjs from "emailjs-com";
+import "./ContactForm.css";
 
-import { useState } from "react";
+const ContactForm = () => {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
 
-export default function ContactForm() {
-  const [loading, setLoading] = useState(false);
+  const handleSubmit = (e) => {
+    e.preventDefault();
 
-  async function handleSubmit(event) {
-    event.preventDefault();
-    setLoading(true);
+    // Your EmailJS service ID
+    const serviceId = "service_xgqzzga";
+    // Your EmailJS template ID
+    const templateId = "template_w16dujw";
 
-    const data = {
-      name: String(event.target.name.value),
-      email: String(event.target.email.value),
-      message: String(event.target.message.value),
-    };
+    const userId = "LmIbFNq-I2uYhPIjN";
 
-    try {
-      const response = await fetch("src/app/api/contact", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
+    // Sending the email
+    emailjs
+      .send(
+        serviceId,
+        templateId,
+        {
+          from_name: name,
+          from_email: email,
+          message: message,
         },
-        body: JSON.stringify(data),
+        userId
+      )
+      .then((response) => {
+        console.log("Email sent successfully:", response);
+        // Clearing the form after successful submission
+        setName("");
+        setEmail("");
+        setMessage("");
+      })
+      .catch((error) => {
+        console.error("Error sending email:", error);
       });
-
-      if (response.ok) {
-        console.log("Message sent successfully");
-        setLoading(false);
-        // reset the form
-        event.target.name.value = "";
-        event.target.email.value = "";
-        event.target.message.value = "";
-      } else {
-        console.log(
-          "Error sending message:",
-          response.status,
-          response.statusText
-        );
-        setLoading(false);
-      }
-    } catch (error) {
-      console.error("Error during fetch:", error);
-      setLoading(false);
-    }
-  }
+  };
   return (
-    <form onSubmit={handleSubmit}>
-      <div className="w-full flex flex-col my-4">
-        <label className="font-bold text-gray-800" htmlFor="name">
-          Name
-        </label>
-        <input
-          type="text"
-          minLength={3}
-          maxLength={150}
-          required
-          className=" p-4 bg-gray-50 border border-gray-100 "
-          autoComplete="off"
-          id="name"
-        />
-      </div>
-      <div className="w-full flex flex-col my-4">
-        <label className="font-bold text-gray-800" htmlFor="email">
-          Email
-        </label>
-        <input
-          type="email"
-          minLength={5}
-          maxLength={150}
-          required
-          className=" p-4 bg-gray-50 border border-gray-100 "
-          autoComplete="off"
-          id="email"
-        />
-      </div>
-      <div>
-        <label className="font-bold text-gray-800" htmlFor="message">
-          Message
-        </label>
-        <textarea
-          rows={4}
-          required
-          minLength={10}
-          maxLength={500}
-          name="message"
-          className="w-full p-4 bg-gray-50 border border-gray-100 "
-        />
-      </div>
-      <button
-        type="submit"
-        disabled={loading}
-        className="px-4 py-2 w-40 bg-gray-700 disabled:bg-gray-400 disabled:text-gray-100 text-white font-medium mt-4"
-      >
-        Send Message
-      </button>
+    <form className="contact-form" onSubmit={handleSubmit}>
+      <input
+        type="text"
+        value={name}
+        placeholder="Your Name"
+        onChange={(e) => setName(e.target.value)}
+      />
+      <input
+        type="email"
+        value={email}
+        placeholder="Your Email"
+        onChange={(e) => setEmail(e.target.value)}
+      />
+      <textarea
+        value={message}
+        placeholder="Your Message"
+        onChange={(e) => setMessage(e.target.value)}
+      />
+      <button type="submit">Send Email</button>
     </form>
   );
-}
+};
+
+export default ContactForm;
