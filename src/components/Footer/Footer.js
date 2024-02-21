@@ -18,14 +18,14 @@ function Footer() {
                 className="mx-5"
                 src="./logo.svg"
                 alt="Logo"
-                width={40}
-                height={40}
+                width={60}
+                height={60}
               />
               <h4 class="logo text-3xl fonat-semibold text-blueGray-700">
                 Namotom Studios
               </h4>
 
-              <div class="mt-6 lg:mb-0 mb-6">
+              <div class="socials mt-6 lg:mb-0 mb-6">
                 <a
                   class="w-8 h-8 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-full border border-transparent text-gray-500 hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
                   href="https://www.facebook.com/namotomstudios"
@@ -34,8 +34,8 @@ function Footer() {
                   <Image
                     src="./facebook.svg"
                     alt="Logo"
-                    width={40}
-                    height={40}
+                    width={60}
+                    height={60}
                     className="w-4 h-4 text-white"
                   />
                 </a>
@@ -47,8 +47,8 @@ function Footer() {
                   <Image
                     src="./twitter.svg"
                     alt="Logo"
-                    width={40}
-                    height={40}
+                    width={60}
+                    height={60}
                     className="w-4 h-4 text-white"
                   />
                 </a>
@@ -60,8 +60,8 @@ function Footer() {
                   <Image
                     src="./youtube.svg"
                     alt="Logo"
-                    width={40}
-                    height={40}
+                    width={60}
+                    height={60}
                     className="w-4 h-4 text-white"
                   />
                 </a>
@@ -73,8 +73,8 @@ function Footer() {
                   <Image
                     src="./linkedin.svg"
                     alt="Logo"
-                    width={40}
-                    height={40}
+                    width={60}
+                    height={60}
                     className="w-4 h-4 text-white"
                   />
                 </a>
@@ -87,8 +87,8 @@ function Footer() {
                   <Image
                     src="./insta.svg"
                     alt="Logo"
-                    width={40}
-                    height={40}
+                    width={60}
+                    height={60}
                     className="w-4 h-4 text-white"
                   />
                 </a>

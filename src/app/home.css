@@ -18,8 +18,6 @@
 }
 
 .typewriter {
-  color: #fff;
-  font-family: monospace;
   overflow: hidden;
   border-right: 0.15em solid orange; /* The typwriter cursor */
   white-space: nowrap; /* Keeps the content on a single line */
@@ -145,6 +143,7 @@
   }
   .body-content {
     max-width: 95vw;
+    margin-bottom: 4vh;
   }
   .t4 {
     text-align: center;

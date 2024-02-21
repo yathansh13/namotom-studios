@@ -7,7 +7,7 @@ import Modal from "../Modal/Modal"; // Import your Modal component
 import { useState } from "react";
 import "./EventCardLive.css";
 
-export default function EventCard(props) {
+export default function EventCardLive(props) {
   const [showModal, setShowModal] = useState(false);
 
   const openModal = () => setShowModal(true);

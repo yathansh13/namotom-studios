@@ -9,7 +9,7 @@ import img2 from "../../../public/backgroun2.svg";
 import img3 from "../../../public/bg-overlay.png";
 import "./service.css";
 import { useEffect, useState } from "react";
-import EventCardLive from "../../components/EventCardLive/EventCardLive";
+import EventCard from "../../components/EventCard/EventCard";
 import eventData from "../../../public/servicesdata.json";
 
 export default function Service() {
@@ -76,7 +76,7 @@ export default function Service() {
           <p className="projects-head">Our Services</p>
           <div className="projects-grid">
             {eventData.map((project, index) => (
-              <EventCardLive
+              <EventCard
                 key={index}
                 name={project.name}
                 linkto={project.link}
