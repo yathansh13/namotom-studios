@@ -65,19 +65,22 @@ export default function Home() {
               Are You Tired
               <br /> Of Watching The Same Old Clichés?
             </p>
-            <p className="typewriter">
+
+            <div class="typewriter">
               <p className="htext2">
-                You know the one where an unlikely group of misfits come
-                together
+                <span>
+                  You know the one where an unlikely group of misfits come
+                </span>
+                <span>
+                  together to solve a mystery at the same time they help each
+                  other
+                </span>
+                <span>
+                  to navigate the ups and downs of life in a seemingly idyllic
+                  small town?{" "}
+                </span>
               </p>
-              <p className="htext2">
-                to solve a mystery at the same time they help each other
-                navigate
-              </p>
-              <p className="htext2">
-                the ups and downs of life in a seemingly idyllic small town?
-              </p>
-            </p>
+            </div>
             <p className=" htext t2">
               You know the one where an unlikely group of misfits come together
               to solve a mystery at the same time they help each other navigate

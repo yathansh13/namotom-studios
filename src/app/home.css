@@ -18,32 +18,60 @@
 }
 
 .typewriter {
-  overflow: hidden;
-  border-right: 0.15em solid orange; /* The typwriter cursor */
-  white-space: nowrap; /* Keeps the content on a single line */
-  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-  letter-spacing: 0.15em; /* Adjust as needed */
-  animation: typing 3.5s steps(30, end), blink-caret 0.5s step-end infinite;
+  color: #000; /* Text color */
+  font-family: monospace;
+  max-width: 51vw;
 }
 
-/* The typing effect */
+.typewriter p {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  text-align: left; /* Align text to the left */
+}
+
+/* Apply typewriter effect to each line */
+.typewriter p span {
+  display: inline-block; /* Display each line inline-block */
+  overflow: hidden;
+  /*   border-right: .15em solid orange; /* The typewriter cursor (caret) */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+  width: 0; /* Start with zero width */
+}
+
+/* Typewriter effect animation */
 @keyframes typing {
   from {
-    width: 0;
+    width: 0; /* Start with zero width */
   }
   to {
-    width: 100%;
+    width: 100%; /* Increase width to full */
   }
 }
 
-/* The typewriter cursor effect */
-@keyframes blink-caret {
-  from,
-  to {
-    border-color: transparent;
-  }
+/* Typewriter cursor effect */
+.typewriter p span:last-child {
+  /* Remove border-right from the last span */
+}
+
+/* Apply typewriter effect to each line individually */
+.typewriter p span:nth-child(1) {
+  animation: typing 3.5s steps(40, end) forwards;
+}
+
+.typewriter p span:nth-child(2) {
+  animation: typing 3.5s steps(40, end) 3.5s forwards; /* Adjust delay for the second line */
+}
+
+.typewriter p span:nth-child(3) {
+  border-right: 0.15em solid orange;
+  animation: typing 3.5s steps(40, end) 7s forwards,
+    blink 0.5s step-end infinite alternate; /* Adjust delay for the third line */
+}
+
+@keyframes blink {
   50% {
-    border-color: orange;
+    border-color: transparent;
   }
 }
 
