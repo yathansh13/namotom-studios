@@ -132,14 +132,14 @@ function Footer() {
                         Services
                       </a>
                     </li>
-                    <li>
+                    {/* <li>
                       <a
                         class="links-body text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
                         href="/work"
                       >
                         Work With Us
                       </a>
-                    </li>
+                    </li> */}
                     <li>
                       <a
                         class="links-body text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"

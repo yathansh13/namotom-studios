@@ -16,7 +16,7 @@ export default function EventCardSoon(props) {
   // Truncate the details to a certain length
 
   return (
-    <div className="event-card1">
+    <div className="event-card4">
       <Image src={props.img} alt="event" width={500} height={250} />
       <div className="event-info">
         <p className="et event-name">{props.name}</p>

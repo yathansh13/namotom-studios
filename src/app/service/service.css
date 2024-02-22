@@ -3,11 +3,14 @@
 .t81 {
   color: #ea9b62;
 
-  font-size: 1.2rem;
+  font-size: 1.9rem;
   font-weight: 700;
 }
 
 .header-text {
+  display: flex;
+  flex-direction: column;
+  gap: 3vw;
   margin-left: 10vw;
   margin-top: 20vh;
   max-width: 40vw;
@@ -22,7 +25,7 @@
 .t101 {
   color: #f3f3cc;
   font-weight: 700;
-  font-size: 1rem;
+  font-size: 1.4rem;
 }
 
 .t120 {
@@ -94,13 +97,18 @@
 
 @media only screen and (max-width: 600px) {
   .t61 {
-    font-size: 2.2rem;
+    font-size: 1.8rem;
   }
   .header-text {
     max-width: 80vw;
     margin-top: 5vh;
   }
   .t81 {
+    font-size: 3.2vh;
+  }
+
+  .t101 {
+    font-size: 3.2vh;
   }
   .projects-grid {
     display: flex;

@@ -2,17 +2,19 @@
   {
     "name": "Capturing Moments, Crafting Memories",
     "link": "/service/moments",
-
+    "description": "College Fests Coverage & After Movies.",
     "imageUrl": "/services/capture.svg"
   },
   {
     "name": "Elevate Your Brand Narrative",
     "link": "/service/narrative",
+    "description": "Brand Work: Product/ Service Marketing Content",
     "imageUrl": "/services/elevate.svg"
   },
   {
     "name": "Beyond Boundaries, Beyond Conventions",
     "link": "/service/beyond",
+    "description": "Creative Projects (Music Videos, Short Films, and More)",
     "imageUrl": "/services/beyond.svg"
   }
 ]

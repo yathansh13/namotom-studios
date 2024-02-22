@@ -79,6 +79,7 @@ export default function Service() {
               <EventCard
                 key={index}
                 name={project.name}
+                desc={project.description}
                 linkto={project.link}
                 img={project.imageUrl}
                 buttontext="Learn More"

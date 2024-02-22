@@ -25,3 +25,6 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+/* Google Font */
+@import url("//fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Noto+Sans:wght@700&family=Open+Sans:wght@300&family=Red+Hat+Display:wght@500&display=swap");

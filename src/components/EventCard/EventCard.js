@@ -20,6 +20,7 @@ export default function EventCard(props) {
       <Image src={props.img} alt="event" width={500} height={250} />
       <div className="event-info">
         <p className="et event-name">{props.name}</p>
+        <p className="et event-description">{props.desc} </p>
       </div>
       <div className="landing-button">
         <a href={props.linkto} target={props.target}>

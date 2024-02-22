@@ -1,15 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Noto+Sans:wght@700&family=Open+Sans:wght@300&family=Red+Hat+Display:wght@500&display=swap");
 
-.event-card1 {
+.event-card4 {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
-  padding: 4px;
+  padding: 5px;
   background-color: #fbdfae;
   border-radius: 5px;
   width: 25vw;
-  height: 50vh;
 }
 
 .event-info {
@@ -58,11 +57,12 @@
 }
 
 @media only screen and (max-width: 600px) {
-  .event-card1 {
+  .event-card4 {
     width: 80vw;
     max-width: 90vw;
     flex-direction: column;
-    align-items: center; /* Center items in the column */
+    align-items: center;
+    height: auto; /* Center items in the column */
   }
   .event-info {
     max-width: 90vw; /* Adjust the width for better responsiveness */

@@ -9,13 +9,13 @@
   background-color: #fbdfae;
   border-radius: 5px;
   max-width: 25vw;
-  height: 48vh;
 }
 
 .event-info {
   display: flex;
   flex-direction: column;
   align-items: center;
+
   max-width: 40vw;
   margin-top: 1vh;
   margin-bottom: 1vh;
@@ -26,10 +26,16 @@
   font-family: "montserrat";
 }
 
+.event-description {
+  margin-top: 1vh;
+  font-size: 0.9rem;
+}
+
 .event-name {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   font-weight: 700;
   margin-bottom: 0.2vh;
+  text-align: center;
 }
 
 .event-title {
@@ -57,7 +63,6 @@
 
 @media only screen and (max-width: 600px) {
   .event-card2 {
-    height: 55vh;
     max-width: 90vw;
     flex-direction: column;
     align-items: center; /* Center items in the column */
