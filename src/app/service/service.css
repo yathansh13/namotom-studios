@@ -2,6 +2,7 @@
 
 .t81 {
   color: #ea9b62;
+  font-size: 2.5vw;
 
   font-size: 1.9rem;
   font-weight: 700;
@@ -10,22 +11,22 @@
 .header-text {
   display: flex;
   flex-direction: column;
-  gap: 3vw;
+  gap: 3vh;
   margin-left: 10vw;
-  margin-top: 20vh;
-  max-width: 40vw;
+  margin-top: 12vh;
+  max-width: 50vw;
 }
 
 .t61 {
   color: #ffc400;
-  font-size: 2.7rem;
+  font-size: 3.2vw;
   font-weight: 600;
 }
 
 .t101 {
   color: #f3f3cc;
   font-weight: 700;
-  font-size: 1.4rem;
+  font-size: 2vw;
 }
 
 .t120 {
